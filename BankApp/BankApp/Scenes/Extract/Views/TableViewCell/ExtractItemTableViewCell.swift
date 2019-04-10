@@ -27,7 +27,12 @@ class ExtractItemTableViewCell: UITableViewCell {
         super.awakeFromNib()
         self.setupLayout()
     }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
     
+    /** Method to setup layout of extract item card */
     func setupLayout() {
         viewTransactionContainer.layer.cornerRadius = 6
         
@@ -37,9 +42,5 @@ class ExtractItemTableViewCell: UITableViewCell {
         viewTransactionContainer.layer.shadowColor = #colorLiteral(red: 0.8509803922, green: 0.8862745098, blue: 0.9137254902, alpha: 1)
         viewTransactionContainer.layer.shadowOffset = CGSize(width: 0, height: 5)
         viewTransactionContainer.layer.shadowOpacity = 0.5
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
     }
 }
