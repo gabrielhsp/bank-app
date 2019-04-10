@@ -23,13 +23,26 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.applyStylesToButton()
+        self.setupLayout()
+    }
+    
+    @IBAction func actionRequestLogin(_ sender: Any) {
+        /** The user and password values will be catched from user and password TextField */
+        let params = ["user" : "test_user", "password" : "Test@1"]
+        
+        let service: Service<LoginResponse> = Service(url: "https://bank-app-test.herokuapp.com/api/login")
+        
+        service.post(params: params, completion: { response in
+            print(response)
+        }, failure: { error in
+            print(error)
+        })
     }
     
     /**
      * Method to apply styles inside login button following the layout definition
      */
-    func applyStylesToButton() {
+    func setupLayout() {
         buttonLogin.layer.cornerRadius = 4
         buttonLogin.layer.shadowColor = #colorLiteral(red: 0.231372549, green: 0.2823529412, blue: 0.9333333333, alpha: 1)
         buttonLogin.layer.shadowOffset = CGSize(width: 0, height: 3)

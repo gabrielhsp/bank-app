@@ -13,6 +13,7 @@ class ExtractItemTableViewCell: UITableViewCell {
     @IBOutlet private weak var labelTransactionDate: UILabel!
     @IBOutlet private weak var labelTransactionTitle: UILabel!
     @IBOutlet private weak var labelTransactionValue: UILabel!
+    @IBOutlet weak var viewTransactionContainer: UIView!
     
     /** This is a static attribute to identify the .xib of our TableViewCell */
     static var identifier = "ExtractItemTableViewCell"
@@ -24,6 +25,18 @@ class ExtractItemTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.setupLayout()
+    }
+    
+    func setupLayout() {
+        viewTransactionContainer.layer.cornerRadius = 6
+        
+        viewTransactionContainer.layer.borderWidth = 1
+        viewTransactionContainer.layer.borderColor = #colorLiteral(red: 0.8588235294, green: 0.8745098039, blue: 0.8901960784, alpha: 0.3)
+        
+        viewTransactionContainer.layer.shadowColor = #colorLiteral(red: 0.8509803922, green: 0.8862745098, blue: 0.9137254902, alpha: 1)
+        viewTransactionContainer.layer.shadowOffset = CGSize(width: 0, height: 5)
+        viewTransactionContainer.layer.shadowOpacity = 0.5
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

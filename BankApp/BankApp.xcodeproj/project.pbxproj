@@ -16,6 +16,10 @@
 		B8ECE0FE225E31A300754CFE /* ExtractViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8ECE0FC225E31A300754CFE /* ExtractViewController.xib */; };
 		B8ECE103225E3BA000754CFE /* ExtractItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ECE101225E3BA000754CFE /* ExtractItemTableViewCell.swift */; };
 		B8ECE104225E3BA000754CFE /* ExtractItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8ECE102225E3BA000754CFE /* ExtractItemTableViewCell.xib */; };
+		B8ECE10A225E627200754CFE /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ECE109225E627200754CFE /* UserAccount.swift */; };
+		B8ECE10D225E638200754CFE /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ECE10C225E638200754CFE /* Service.swift */; };
+		B8ECE112225E805700754CFE /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ECE111225E805700754CFE /* LoginResponse.swift */; };
+		B8ECE115225E80E400754CFE /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ECE114225E80E400754CFE /* Error.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		B8ECE0FC225E31A300754CFE /* ExtractViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExtractViewController.xib; sourceTree = "<group>"; };
 		B8ECE101225E3BA000754CFE /* ExtractItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractItemTableViewCell.swift; sourceTree = "<group>"; };
 		B8ECE102225E3BA000754CFE /* ExtractItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExtractItemTableViewCell.xib; sourceTree = "<group>"; };
+		B8ECE109225E627200754CFE /* UserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
+		B8ECE10C225E638200754CFE /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		B8ECE111225E805700754CFE /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		B8ECE114225E80E400754CFE /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,8 @@
 			isa = PBXGroup;
 			children = (
 				B8ECE108225E5D3B00754CFE /* App */,
+				B8ECE110225E6CA000754CFE /* Service */,
+				B8ECE113225E805C00754CFE /* Models */,
 				B8ECE0F8225E220B00754CFE /* Scenes */,
 				B8ECE0E9225E218200754CFE /* Assets.xcassets */,
 				B8ECE0EB225E218200754CFE /* LaunchScreen.storyboard */,
@@ -80,19 +90,19 @@
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		B8ECE0F9225E221500754CFE /* View */ = {
+		B8ECE0F9225E221500754CFE /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				B8ECE0F5225E220300754CFE /* LoginViewController.xib */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		B8ECE0FA225E223800754CFE /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				B8ECE0F9225E221500754CFE /* View */,
-				B8ECE106225E5CC300754CFE /* ViewControllers */,
+				B8ECE0F9225E221500754CFE /* Views */,
+				B8ECE106225E5CC300754CFE /* ViewController */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -100,36 +110,36 @@
 		B8ECE0FF225E31A800754CFE /* Extract */ = {
 			isa = PBXGroup;
 			children = (
-				B8ECE0FB225E31A300754CFE /* ExtractViewController.swift */,
-				B8ECE100225E31B300754CFE /* View */,
-				B8ECE105225E3BA400754CFE /* TableViewCell */,
+				B8ECE100225E31B300754CFE /* Views */,
+				B8ECE10E225E6BA100754CFE /* ViewController */,
 			);
 			path = Extract;
 			sourceTree = "<group>";
 		};
-		B8ECE100225E31B300754CFE /* View */ = {
+		B8ECE100225E31B300754CFE /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				B8ECE0FC225E31A300754CFE /* ExtractViewController.xib */,
-				B8ECE102225E3BA000754CFE /* ExtractItemTableViewCell.xib */,
+				B8ECE105225E3BA400754CFE /* TableViewCell */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		B8ECE105225E3BA400754CFE /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				B8ECE102225E3BA000754CFE /* ExtractItemTableViewCell.xib */,
 				B8ECE101225E3BA000754CFE /* ExtractItemTableViewCell.swift */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
 		};
-		B8ECE106225E5CC300754CFE /* ViewControllers */ = {
+		B8ECE106225E5CC300754CFE /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				B8ECE0F4225E220300754CFE /* LoginViewController.swift */,
 			);
-			path = ViewControllers;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		B8ECE108225E5D3B00754CFE /* App */ = {
@@ -138,6 +148,32 @@
 				B8ECE0E2225E218100754CFE /* AppDelegate.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		B8ECE10E225E6BA100754CFE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B8ECE0FB225E31A300754CFE /* ExtractViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B8ECE110225E6CA000754CFE /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B8ECE10C225E638200754CFE /* Service.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		B8ECE113225E805C00754CFE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B8ECE111225E805700754CFE /* LoginResponse.swift */,
+				B8ECE109225E627200754CFE /* UserAccount.swift */,
+				B8ECE114225E80E400754CFE /* Error.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,10 +249,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8ECE115225E80E400754CFE /* Error.swift in Sources */,
 				B8ECE0FD225E31A300754CFE /* ExtractViewController.swift in Sources */,
 				B8ECE0F6225E220300754CFE /* LoginViewController.swift in Sources */,
 				B8ECE103225E3BA000754CFE /* ExtractItemTableViewCell.swift in Sources */,
+				B8ECE10A225E627200754CFE /* UserAccount.swift in Sources */,
+				B8ECE112225E805700754CFE /* LoginResponse.swift in Sources */,
 				B8ECE0E3225E218100754CFE /* AppDelegate.swift in Sources */,
+				B8ECE10D225E638200754CFE /* Service.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
