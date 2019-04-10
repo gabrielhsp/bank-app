@@ -62,11 +62,11 @@
 		B8ECE0E1225E218100754CFE /* BankApp */ = {
 			isa = PBXGroup;
 			children = (
-				B8ECE0E2225E218100754CFE /* AppDelegate.swift */,
+				B8ECE108225E5D3B00754CFE /* App */,
+				B8ECE0F8225E220B00754CFE /* Scenes */,
 				B8ECE0E9225E218200754CFE /* Assets.xcassets */,
 				B8ECE0EB225E218200754CFE /* LaunchScreen.storyboard */,
 				B8ECE0EE225E218200754CFE /* Info.plist */,
-				B8ECE0F8225E220B00754CFE /* Scenes */,
 			);
 			path = BankApp;
 			sourceTree = "<group>";
@@ -80,19 +80,19 @@
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		B8ECE0F9225E221500754CFE /* ViewController */ = {
+		B8ECE0F9225E221500754CFE /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B8ECE0F4225E220300754CFE /* LoginViewController.swift */,
 				B8ECE0F5225E220300754CFE /* LoginViewController.xib */,
 			);
-			path = ViewController;
+			path = View;
 			sourceTree = "<group>";
 		};
 		B8ECE0FA225E223800754CFE /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				B8ECE0F9225E221500754CFE /* ViewController */,
+				B8ECE0F9225E221500754CFE /* View */,
+				B8ECE106225E5CC300754CFE /* ViewControllers */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -100,28 +100,44 @@
 		B8ECE0FF225E31A800754CFE /* Extract */ = {
 			isa = PBXGroup;
 			children = (
-				B8ECE100225E31B300754CFE /* ViewController */,
+				B8ECE0FB225E31A300754CFE /* ExtractViewController.swift */,
+				B8ECE100225E31B300754CFE /* View */,
 				B8ECE105225E3BA400754CFE /* TableViewCell */,
 			);
 			path = Extract;
 			sourceTree = "<group>";
 		};
-		B8ECE100225E31B300754CFE /* ViewController */ = {
+		B8ECE100225E31B300754CFE /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B8ECE0FB225E31A300754CFE /* ExtractViewController.swift */,
 				B8ECE0FC225E31A300754CFE /* ExtractViewController.xib */,
+				B8ECE102225E3BA000754CFE /* ExtractItemTableViewCell.xib */,
 			);
-			path = ViewController;
+			path = View;
 			sourceTree = "<group>";
 		};
 		B8ECE105225E3BA400754CFE /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
 				B8ECE101225E3BA000754CFE /* ExtractItemTableViewCell.swift */,
-				B8ECE102225E3BA000754CFE /* ExtractItemTableViewCell.xib */,
 			);
 			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		B8ECE106225E5CC300754CFE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B8ECE0F4225E220300754CFE /* LoginViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B8ECE108225E5D3B00754CFE /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B8ECE0E2225E218100754CFE /* AppDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

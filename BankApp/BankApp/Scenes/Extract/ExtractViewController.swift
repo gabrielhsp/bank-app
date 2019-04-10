@@ -30,7 +30,4 @@ class ExtractViewController: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-    
-    @IBAction func actionLogoutUser(_ sender: Any) {
-    }
 }

@@ -9,7 +9,10 @@
 import UIKit
 
 class ExtractItemTableViewCell: UITableViewCell {
-    
+    @IBOutlet private weak var labelTransactionCategory: UILabel!
+    @IBOutlet private weak var labelTransactionDate: UILabel!
+    @IBOutlet private weak var labelTransactionTitle: UILabel!
+    @IBOutlet private weak var labelTransactionValue: UILabel!
     
     /** This is a static attribute to identify the .xib of our TableViewCell */
     static var identifier = "ExtractItemTableViewCell"

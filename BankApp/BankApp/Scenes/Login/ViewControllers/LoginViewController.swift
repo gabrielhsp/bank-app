@@ -9,9 +9,9 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-    @IBOutlet weak var textFieldUser: UITextField!
-    @IBOutlet weak var textFieldPassword: UITextField!
-    @IBOutlet weak var buttonLogin: UIButton!
+    @IBOutlet private weak var textFieldUser: UITextField!
+    @IBOutlet private weak var textFieldPassword: UITextField!
+    @IBOutlet private weak var buttonLogin: UIButton!
     
     init() {
         super.init(nibName: "LoginViewController", bundle: Bundle.main)
@@ -31,7 +31,6 @@ class LoginViewController: UIViewController {
      */
     func applyStylesToButton() {
         buttonLogin.layer.cornerRadius = 4
-        
         buttonLogin.layer.shadowColor = #colorLiteral(red: 0.231372549, green: 0.2823529412, blue: 0.9333333333, alpha: 1)
         buttonLogin.layer.shadowOffset = CGSize(width: 0, height: 3)
         buttonLogin.layer.shadowRadius = 4
