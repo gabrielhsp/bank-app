@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExtractViewController" customModule="BankApp" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonLogout" destination="x3v-D8-yki" id="piI-6p-tnn"/>
+                <outlet property="labelAccountBalance" destination="MSL-op-YrJ" id="i5x-1L-N1V"/>
+                <outlet property="labelAgencyAndAccount" destination="JBF-B5-BSQ" id="KWT-fT-VDp"/>
+                <outlet property="labelUserName" destination="Dgf-uQ-ogG" id="6t4-dh-vfg"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xDs-gy-Nyp">
+                    <rect key="frame" x="0.0" y="20" width="320" height="216"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jose da Silva Teste" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dgf-uQ-ogG">
+                            <rect key="frame" x="16" y="20" width="245" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x3v-D8-yki">
+                            <rect key="frame" x="277" y="20" width="27" height="27"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="27" id="OEo-AG-e9p"/>
+                                <constraint firstAttribute="width" constant="27" id="Tmk-jB-jxm"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="icon_logout">
+                                <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="actionLogoutUser:" destination="-1" eventType="touchUpInside" id="si6-mY-BLs"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57E-9z-IFu">
+                            <rect key="frame" x="16" y="78" width="34" height="15"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agência / Conta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBF-B5-BSQ">
+                            <rect key="frame" x="16" y="99" width="288" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saldo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9H-8W-sgA">
+                            <rect key="frame" x="16" y="149" width="32" height="15"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 1.000,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSL-op-YrJ">
+                            <rect key="frame" x="16" y="170" width="288" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="MSL-op-YrJ" secondAttribute="trailing" constant="16" id="4h2-PA-zds"/>
+                        <constraint firstItem="57E-9z-IFu" firstAttribute="leading" secondItem="xDs-gy-Nyp" secondAttribute="leading" constant="16" id="69B-El-Jau"/>
+                        <constraint firstItem="Dgf-uQ-ogG" firstAttribute="top" secondItem="xDs-gy-Nyp" secondAttribute="top" constant="20" id="8bE-J6-kTG"/>
+                        <constraint firstItem="Q9H-8W-sgA" firstAttribute="leading" secondItem="xDs-gy-Nyp" secondAttribute="leading" constant="16" id="8tH-Ob-rws"/>
+                        <constraint firstItem="MSL-op-YrJ" firstAttribute="top" secondItem="Q9H-8W-sgA" secondAttribute="bottom" constant="6" id="9pv-Xv-4bc"/>
+                        <constraint firstItem="x3v-D8-yki" firstAttribute="leading" secondItem="Dgf-uQ-ogG" secondAttribute="trailing" constant="16" id="BtV-G4-hSy"/>
+                        <constraint firstAttribute="trailing" secondItem="x3v-D8-yki" secondAttribute="trailing" constant="16" id="Gew-hx-yYh"/>
+                        <constraint firstAttribute="bottom" secondItem="MSL-op-YrJ" secondAttribute="bottom" constant="16" id="OTt-fM-1jN"/>
+                        <constraint firstAttribute="trailing" secondItem="JBF-B5-BSQ" secondAttribute="trailing" constant="16" id="UcR-vb-zF2"/>
+                        <constraint firstItem="JBF-B5-BSQ" firstAttribute="leading" secondItem="xDs-gy-Nyp" secondAttribute="leading" constant="16" id="X5A-Pq-J6e"/>
+                        <constraint firstItem="x3v-D8-yki" firstAttribute="top" secondItem="xDs-gy-Nyp" secondAttribute="top" constant="20" id="cPb-SF-v0h"/>
+                        <constraint firstItem="MSL-op-YrJ" firstAttribute="leading" secondItem="xDs-gy-Nyp" secondAttribute="leading" constant="16" id="g0Q-Cm-ENA"/>
+                        <constraint firstItem="JBF-B5-BSQ" firstAttribute="top" secondItem="57E-9z-IFu" secondAttribute="bottom" constant="6" id="nuf-iV-ls2"/>
+                        <constraint firstItem="Dgf-uQ-ogG" firstAttribute="leading" secondItem="xDs-gy-Nyp" secondAttribute="leading" constant="16" id="sYA-qZ-a9w"/>
+                        <constraint firstItem="57E-9z-IFu" firstAttribute="top" secondItem="Dgf-uQ-ogG" secondAttribute="bottom" constant="28" id="slG-GC-Mvf"/>
+                        <constraint firstItem="Q9H-8W-sgA" firstAttribute="top" secondItem="JBF-B5-BSQ" secondAttribute="bottom" constant="20" id="wfA-SV-lk2"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yiu-Qu-YrA">
+                    <rect key="frame" x="0.0" y="236" width="320" height="332"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="0.26734498509999999" green="0.3273737558" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="xDs-gy-Nyp" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="1Ix-x4-skZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xDs-gy-Nyp" secondAttribute="trailing" id="LLt-m8-w6n"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="yiu-Qu-YrA" secondAttribute="bottom" id="Sd4-gp-4jM"/>
+                <constraint firstItem="yiu-Qu-YrA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="XIm-Lj-9cQ"/>
+                <constraint firstItem="yiu-Qu-YrA" firstAttribute="top" secondItem="xDs-gy-Nyp" secondAttribute="bottom" id="Z0S-Ua-SHL"/>
+                <constraint firstItem="xDs-gy-Nyp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="aOx-eH-5C3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yiu-Qu-YrA" secondAttribute="trailing" id="opf-2J-Knh"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_logout" width="27" height="27"/>
+    </resources>
+</document>
