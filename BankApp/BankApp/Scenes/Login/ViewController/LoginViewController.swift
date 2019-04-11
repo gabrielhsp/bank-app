@@ -32,9 +32,11 @@ class LoginViewController: UIViewController {
      * The user and password values will be catched from user and password TextField
      */
     @IBAction func actionRequestLogin(_ sender: Any) {
-        let dataIsValid: Bool = self.validateLoginFields()
+        guard let userValue = textFieldUser.text else { return }
+        guard let passwordValue = textFieldPassword.text else { return }
         
-        let params = ["user" : "test_user", "password" : "Test@1"]
+        let dataIsValid: Bool = self.validateLoginFields(user: userValue, password: passwordValue)
+        let params = ["user" : userValue, "password" : passwordValue]
         
         if dataIsValid {
             Alamofire.request("https://bank-app-test.herokuapp.com/api/login", method: .post, parameters: params, encoding: JSONEncoding.default).responseJSON(completionHandler: {
@@ -59,11 +61,8 @@ class LoginViewController: UIViewController {
 }
 
 extension LoginViewController {
-    func validateLoginFields() -> Bool {
-        guard let userValue = textFieldUser.text else { return false }
-        guard let passwordValue = textFieldPassword.text else { return false }
-        
-        if valuesAreEmpty(user: userValue, password: passwordValue) && userLoginIsValid(user: userValue) && passwordIsValid(password: passwordValue) {
+    func validateLoginFields(user: String, password: String) -> Bool {
+        if valuesAreEmpty(user: user, password: password) && userLoginIsValid(user: user) && passwordIsValid(password: password) {
             return true
         }
         
