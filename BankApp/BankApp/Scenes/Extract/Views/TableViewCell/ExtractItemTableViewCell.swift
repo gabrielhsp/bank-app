@@ -31,8 +31,19 @@ class ExtractItemTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-    
-    /** Method to setup layout of extract item card */
+}
+
+extension ExtractItemTableViewCell {
+    func setDataToTableViewCell(extract: Extract) {
+        self.labelTransactionCategory.text = extract.category
+        self.labelTransactionDate.text = extract.date
+        self.labelTransactionTitle.text = extract.title
+        self.labelTransactionValue.text = String(format: "R$ %.02f", extract.value ?? 0)
+    }
+}
+
+/** Extension to setup layout of extract item card */
+extension ExtractItemTableViewCell {
     func setupLayout() {
         viewTransactionContainer.layer.cornerRadius = 6
         

@@ -36,12 +36,14 @@ class LoginViewController: UIViewController {
         let service: Service<LoginResponse> = Service(url: "https://bank-app-test.herokuapp.com/api/login")
         
         service.post(params: params, completion: { response in
-            print(response)
+            self.present(ExtractViewController(loginResponse: response), animated: true, completion: nil)
         }, failure: { error in
             print(error)
         })
     }
-    
+}
+
+extension LoginViewController {
     /** Method to apply styles inside login button following the layout definition */
     func setupLayout() {
         buttonLogin.layer.cornerRadius = 4

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B848F6C4225F812500469DB2 /* Extract.swift in Sources */ = {isa = PBXBuildFile; fileRef = B848F6C3225F812500469DB2 /* Extract.swift */; };
+		B848F6C6225F88F700469DB2 /* ExtractList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B848F6C5225F88F700469DB2 /* ExtractList.swift */; };
 		B8ECE0E3225E218100754CFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ECE0E2225E218100754CFE /* AppDelegate.swift */; };
 		B8ECE0EA225E218200754CFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8ECE0E9225E218200754CFE /* Assets.xcassets */; };
 		B8ECE0ED225E218200754CFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8ECE0EB225E218200754CFE /* LaunchScreen.storyboard */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B848F6C3225F812500469DB2 /* Extract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extract.swift; sourceTree = "<group>"; };
+		B848F6C5225F88F700469DB2 /* ExtractList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractList.swift; sourceTree = "<group>"; };
 		B8ECE0DF225E218100754CFE /* BankApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8ECE0E2225E218100754CFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8ECE0E9225E218200754CFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -172,6 +176,8 @@
 				B8ECE111225E805700754CFE /* LoginResponse.swift */,
 				B8ECE109225E627200754CFE /* UserAccount.swift */,
 				B8ECE114225E80E400754CFE /* Error.swift */,
+				B848F6C3225F812500469DB2 /* Extract.swift */,
+				B848F6C5225F88F700469DB2 /* ExtractList.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -251,6 +257,8 @@
 			files = (
 				B8ECE115225E80E400754CFE /* Error.swift in Sources */,
 				B8ECE0FD225E31A300754CFE /* ExtractViewController.swift in Sources */,
+				B848F6C4225F812500469DB2 /* Extract.swift in Sources */,
+				B848F6C6225F88F700469DB2 /* ExtractList.swift in Sources */,
 				B8ECE0F6225E220300754CFE /* LoginViewController.swift in Sources */,
 				B8ECE103225E3BA000754CFE /* ExtractItemTableViewCell.swift in Sources */,
 				B8ECE10A225E627200754CFE /* UserAccount.swift in Sources */,
