@@ -36,9 +36,23 @@ class ExtractItemTableViewCell: UITableViewCell {
 extension ExtractItemTableViewCell {
     func setDataToTableViewCell(extract: Extract) {
         self.labelTransactionCategory.text = extract.category
-        self.labelTransactionDate.text = extract.date
+        self.labelTransactionDate.text = self.convertStringToDateFormat(stringData: extract.date ?? "9999-99-99")
         self.labelTransactionTitle.text = extract.title
         self.labelTransactionValue.text = String(format: "R$ %.02f", extract.value ?? 0)
+    }
+    
+    func convertStringToDateFormat(stringData: String) -> String {
+        let dateFormatterGet = DateFormatter()
+            dateFormatterGet.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        
+        let dateFormatterPrint = DateFormatter()
+            dateFormatterPrint.dateFormat = "dd/MM/yyyy"
+        
+        if let date = dateFormatterGet.date(from: "2016-02-29 12:24:26") {
+            return dateFormatterPrint.string(from: date)
+        } else {
+            return "There was an error decoding the string"
+        }
     }
 }
 
