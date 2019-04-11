@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ExtractViewController: UIViewController {
     @IBOutlet weak var labelUserName: UILabel!
@@ -16,7 +17,7 @@ class ExtractViewController: UIViewController {
     @IBOutlet weak var tableViewExtract: UITableView!
     
     private var loginResponse: LoginResponse
-    private var extractList: [Extract] = []
+    private var extractList: [Extract]?
     
     init(loginResponse: LoginResponse) {
         self.loginResponse = loginResponse
@@ -33,6 +34,7 @@ class ExtractViewController: UIViewController {
         self.setupLayout()
         self.setDelagateAndDataSource()
         self.returnExtractList()
+        
         self.setAccountInformations()
     }
 }
@@ -55,14 +57,22 @@ extension ExtractViewController {
     }
 }
 
+/** Extension to make a request to the API of statements and render inside a TableView a list of items */
 extension ExtractViewController {
     func returnExtractList() -> Void {
-        let service: Service<ExtractList> = Service(url: "https://bank-app-test.herokuapp.com/api/statements/1")
-        
-        service.get(completion: { response in
-            self.extractList = response.extractList
-        }, failure: { error in
-            print(error)
+        Alamofire.request("https://bank-app-test.herokuapp.com/api/statements/1").responseJSON(completionHandler: { response in
+            switch response.result {
+                case .success(_):
+                    do {
+                        let extractList = try JSONDecoder().decode(ExtractList.self, from: response.data!)
+                        self.extractList = extractList.extractList
+                        self.tableViewExtract.reloadData()
+                    } catch let error {
+                        print(error)
+                    }
+                case .failure(let error):
+                    print(error)
+            }
         })
     }
 }
@@ -98,7 +108,9 @@ extension ExtractViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ExtractItemTableViewCell", for: indexPath) as! ExtractItemTableViewCell
         
-//        cell.setDataToTableViewCell(extract: extractList[indexPath.row])
+        if let extract = extractList {
+            cell.setDataToTableViewCell(extract: extract[indexPath.row])
+        }
         
         return cell
     }

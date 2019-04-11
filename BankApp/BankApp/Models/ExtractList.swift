@@ -8,10 +8,12 @@
 
 import UIKit
 
-class ExtractList: Codable {
+struct ExtractList: Codable {
     var extractList: [Extract]
+    //var error: Error
     
     private enum CodingKeys: String, CodingKey {
         case extractList = "statementList"
+        //case error
     }
 }

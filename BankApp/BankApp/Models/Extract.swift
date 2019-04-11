@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Extract: Codable {
+struct Extract: Codable {
     var title: String?
     var date: String?
     var category: String?
