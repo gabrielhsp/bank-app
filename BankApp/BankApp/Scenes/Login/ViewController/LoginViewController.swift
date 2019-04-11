@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class LoginViewController: UIViewController {
     @IBOutlet private weak var textFieldUser: UITextField!
@@ -33,12 +34,21 @@ class LoginViewController: UIViewController {
     @IBAction func actionRequestLogin(_ sender: Any) {
         let params = ["user" : "test_user", "password" : "Test@1"]
         
-        let service: Service<LoginResponse> = Service(url: "https://bank-app-test.herokuapp.com/api/login")
-        
-        service.post(params: params, completion: { response in
-            self.present(ExtractViewController(loginResponse: response), animated: true, completion: nil)
-        }, failure: { error in
-            print(error)
+        Alamofire.request("https://bank-app-test.herokuapp.com/api/login", method: .post, parameters: params, encoding: JSONEncoding.default).responseJSON(completionHandler: {
+            response in
+                switch response.result {
+                    case .success(_):
+                        do {
+                            let loginResponse = try JSONDecoder().decode(LoginResponse.self, from: response.data!)
+                            
+                            self.present(ExtractViewController(loginResponse: loginResponse), animated: true, completion: nil)
+                        } catch (let error) {
+                            print(error)
+                    }
+                    
+                    case .failure(let error):
+                        print(error)
+                }
         })
     }
 }
