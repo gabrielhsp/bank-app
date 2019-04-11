@@ -16,7 +16,7 @@ class ExtractViewController: UIViewController {
     @IBOutlet weak var tableViewExtract: UITableView!
     
     private var loginResponse: LoginResponse
-    private var extractList = [Extract]()
+    private var extractList: [Extract] = []
     
     init(loginResponse: LoginResponse) {
         self.loginResponse = loginResponse
@@ -32,11 +32,8 @@ class ExtractViewController: UIViewController {
         super.viewDidLoad()
         self.setupLayout()
         self.setDelagateAndDataSource()
+        self.returnExtractList()
         self.setAccountInformations()
-        
-        self.extractList = self.returnExtractList()
-        
-        print(extractList)
     }
 }
 
@@ -59,19 +56,14 @@ extension ExtractViewController {
 }
 
 extension ExtractViewController {
-    func returnExtractList() -> [Extract] {
+    func returnExtractList() -> Void {
         let service: Service<ExtractList> = Service(url: "https://bank-app-test.herokuapp.com/api/statements/1")
-        var arrayOfExtract = [Extract]()
         
         service.get(completion: { response in
-            arrayOfExtract = response.extractList
+            self.extractList = response.extractList
         }, failure: { error in
             print(error)
         })
-        
-        print(arrayOfExtract)
-        
-        return arrayOfExtract
     }
 }
 
@@ -99,23 +91,14 @@ extension ExtractViewController: UITableViewDelegate, UITableViewDataSource {
     
     /** Method that determinates the number of itens inside section of our TableView */
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return extractList.count
+        return 9
     }
     
     /** Method that register the TableViewCell that will be used inside the TableView */
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ExtractItemTableViewCell", for: indexPath) as! ExtractItemTableViewCell
         
-        cell.setDataToTableViewCell(extract: extractList[indexPath.row])
-        
-//        let service: Service<ExtractList> = Service(url: "https://bank-app-test.herokuapp.com/api/statements/1")
-//
-//        service.get(completion: { response in
-//            cell.setDataToTableViewCell(extract: response.extractList[indexPath.row])
-//            self.extractList = response.extractList
-//        }, failure: { error in
-//            print(error)
-//        })
+//        cell.setDataToTableViewCell(extract: extractList[indexPath.row])
         
         return cell
     }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct ExtractList: Codable {
+class ExtractList: Codable {
     var extractList: [Extract]
     
     private enum CodingKeys: String, CodingKey {
