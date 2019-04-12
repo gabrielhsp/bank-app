@@ -31,10 +31,8 @@ class ExtractViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupLayout()
         self.setDelagateAndDataSource()
         self.returnExtractList()
-        
         self.setAccountInformations()
     }
 }
@@ -85,13 +83,6 @@ extension ExtractViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-    
-    /** Method to apply styles inside table view cell */
-    func setupLayout() {
-        self.tableViewExtract.rowHeight = UITableView.automaticDimension
-        self.tableViewExtract.estimatedRowHeight = 80
-        self.tableViewExtract.separatorStyle = .none
-    }
 }
 
 /** Extension of ExtractViewController to implement the Delegate and DataSource protocols of TableView */
@@ -129,5 +120,9 @@ extension ExtractViewController: UITableViewDelegate, UITableViewDataSource {
     /** Method to change the title of our TableView inside header section */
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Recentes"
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
 }

@@ -92,7 +92,7 @@
                         <constraint firstItem="Q9H-8W-sgA" firstAttribute="top" secondItem="JBF-B5-BSQ" secondAttribute="bottom" constant="20" id="wfA-SV-lk2"/>
                     </constraints>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="50" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yiu-Qu-YrA">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="50" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yiu-Qu-YrA">
                     <rect key="frame" x="0.0" y="236" width="320" height="332"/>
                     <color key="backgroundColor" red="0.99607843137254903" green="0.99607843137254903" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </tableView>
