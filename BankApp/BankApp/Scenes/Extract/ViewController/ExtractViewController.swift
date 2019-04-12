@@ -52,8 +52,11 @@ extension ExtractViewController {
 /** Extension to set user account informations inside each label */
 extension ExtractViewController {
     func setAccountInformations() {
+        guard let agency = loginResponse.userAccount?.account else { return }
+        guard let account = loginResponse.userAccount?.agency else { return }
+        
         self.labelUserName.text = loginResponse.userAccount?.name
-        self.labelAgencyAndAccount.text = "\(loginResponse.userAccount?.account ?? "Não tem agência") / \(loginResponse.userAccount?.agency ?? "Não tem conta")"
+        self.labelAgencyAndAccount.text = "\(agency) / \(account.maskAgency())"
         self.labelAccountBalance.text = String(format: "R$ %.02f", loginResponse.userAccount?.balance ?? 0)
     }
 }

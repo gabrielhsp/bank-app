@@ -10,6 +10,7 @@
 		3AB8FFA7C755930B9AB0CD22 /* Pods_BankApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A49976C7D2A70D4C960ACD4 /* Pods_BankApp.framework */; };
 		B848F6C4225F812500469DB2 /* Extract.swift in Sources */ = {isa = PBXBuildFile; fileRef = B848F6C3225F812500469DB2 /* Extract.swift */; };
 		B848F6C6225F88F700469DB2 /* ExtractList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B848F6C5225F88F700469DB2 /* ExtractList.swift */; };
+		B8A597482260C8EE00CB17B5 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A597472260C8EE00CB17B5 /* String.swift */; };
 		B8ECE0E3225E218100754CFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ECE0E2225E218100754CFE /* AppDelegate.swift */; };
 		B8ECE0EA225E218200754CFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8ECE0E9225E218200754CFE /* Assets.xcassets */; };
 		B8ECE0ED225E218200754CFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8ECE0EB225E218200754CFE /* LaunchScreen.storyboard */; };
@@ -30,6 +31,7 @@
 		4EDCF644AF79E69ED17FFB1B /* Pods-BankApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankApp.release.xcconfig"; path = "Target Support Files/Pods-BankApp/Pods-BankApp.release.xcconfig"; sourceTree = "<group>"; };
 		B848F6C3225F812500469DB2 /* Extract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extract.swift; sourceTree = "<group>"; };
 		B848F6C5225F88F700469DB2 /* ExtractList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractList.swift; sourceTree = "<group>"; };
+		B8A597472260C8EE00CB17B5 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		B8ECE0DF225E218100754CFE /* BankApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8ECE0E2225E218100754CFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8ECE0E9225E218200754CFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -77,6 +79,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		B8A597492260C8F400CB17B5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B8A597472260C8EE00CB17B5 /* String.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		B8ECE0D6225E218100754CFE = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +108,7 @@
 		B8ECE0E1225E218100754CFE /* BankApp */ = {
 			isa = PBXGroup;
 			children = (
+				B8A597492260C8F400CB17B5 /* Extensions */,
 				B8ECE110225E6CA000754CFE /* Service */,
 				B8ECE113225E805C00754CFE /* Models */,
 				B8ECE0F8225E220B00754CFE /* Scenes */,
@@ -321,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8ECE115225E80E400754CFE /* Error.swift in Sources */,
+				B8A597482260C8EE00CB17B5 /* String.swift in Sources */,
 				B8ECE0FD225E31A300754CFE /* ExtractViewController.swift in Sources */,
 				B848F6C4225F812500469DB2 /* Extract.swift in Sources */,
 				B848F6C6225F88F700469DB2 /* ExtractList.swift in Sources */,
