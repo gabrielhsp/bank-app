@@ -60,7 +60,9 @@ extension ExtractViewController {
 /** Extension to make a request to the API of statements and render inside a TableView a list of items */
 extension ExtractViewController {
     func returnExtractList() -> Void {
-        Alamofire.request("https://bank-app-test.herokuapp.com/api/statements/1").responseJSON(completionHandler: { response in
+        guard let userIdentifier = self.loginResponse.userAccount?.id else { return }
+        
+        Alamofire.request("https://bank-app-test.herokuapp.com/api/statements/\(userIdentifier)").responseJSON(completionHandler: { response in
             switch response.result {
                 case .success(_):
                     do {
