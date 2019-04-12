@@ -12,7 +12,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExtractViewController" customModule="BankApp" customModuleProvider="target">
             <connections>
-                <outlet property="buttonLogout" destination="x3v-D8-yki" id="piI-6p-tnn"/>
                 <outlet property="labelAccountBalance" destination="MSL-op-YrJ" id="i5x-1L-N1V"/>
                 <outlet property="labelAgencyAndAccount" destination="JBF-B5-BSQ" id="KWT-fT-VDp"/>
                 <outlet property="labelUserName" destination="Dgf-uQ-ogG" id="6t4-dh-vfg"/>
@@ -44,7 +43,7 @@
                                 <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <connections>
-                                <action selector="actionLogoutUser:" destination="-1" eventType="touchUpInside" id="si6-mY-BLs"/>
+                                <action selector="actionLogoutUser:" destination="-1" eventType="touchUpInside" id="WYb-r1-MG1"/>
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57E-9z-IFu">

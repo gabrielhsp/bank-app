@@ -129,7 +129,8 @@ extension String {
             let digit = 11 - slice.reduce(into: 0) {
                 number -= 1
                 $0 += $1 * number
-                } % 11
+            } % 11
+            
             return digit > 9 ? 0 : digit
         }
         

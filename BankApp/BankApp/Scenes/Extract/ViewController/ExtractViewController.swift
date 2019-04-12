@@ -11,7 +11,6 @@ import Alamofire
 
 class ExtractViewController: UIViewController {
     @IBOutlet weak var labelUserName: UILabel!
-    @IBOutlet weak var buttonLogout: UIButton!
     @IBOutlet weak var labelAgencyAndAccount: UILabel!
     @IBOutlet weak var labelAccountBalance: UILabel!
     @IBOutlet weak var tableViewExtract: UITableView!
@@ -34,6 +33,10 @@ class ExtractViewController: UIViewController {
         self.setDelagateAndDataSource()
         self.returnExtractList()
         self.setAccountInformations()
+    }
+    
+    @IBAction func actionLogoutUser(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
 }
 
